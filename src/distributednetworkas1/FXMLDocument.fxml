@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="428.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="distributednetworkas1.FXMLDocumentController">
+   <children>
+      <Text layoutX="532.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encrypt/Decrypt:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="encryptRadio" layoutX="532.0" layoutY="58.0" mnemonicParsing="false" selected="true" text="Encrypt Text">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="encDec" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="decyptRadio" layoutX="532.0" layoutY="91.0" mnemonicParsing="false" text="Decrypt Text" toggleGroup="$encDec">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Text layoutX="26.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your Text to be encrypted or decrypted and then press the button:" wrappingWidth="442.0">
+         <font>
+            <Font size="13.5" />
+         </font>
+      </Text>
+      <TextArea fx:id="inputText" layoutX="26.0" layoutY="58.0" prefHeight="148.0" prefWidth="442.0" wrapText="true" />
+      <Text fx:id="decryptedEcnrypted" layoutX="26.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="436.0">
+         <font>
+            <Font size="13.5" />
+         </font>
+      </Text>
+      <Button fx:id="button" layoutX="532.0" layoutY="124.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="101.0" text="Encrypt/Decypt" />
+      <Button fx:id="exitButton" layoutX="532.0" layoutY="169.0" mnemonicParsing="false" onAction="#close" prefHeight="29.0" prefWidth="101.0" text="Exit" />
+      <TextArea fx:id="outputText" layoutX="26.0" layoutY="266.0" prefHeight="148.0" prefWidth="442.0" wrapText="true" />
+   </children>
+</AnchorPane>
